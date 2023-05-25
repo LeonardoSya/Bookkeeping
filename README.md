@@ -1,4 +1,4 @@
-# Bookkeeping
+## 开源项目 Bookkeeping
 
 ##### 开发者:  LeonardoSya    https://github.com/LeonardoSya
 
@@ -40,7 +40,7 @@
 4. 通过moment包将日期字符串转成Date对象，在router.post('/account')中AccountModel.create插入数据库
 5. router.get('/account')内读取信息改为读取数据库集合中的信息
 6. 在list.js中ejs格式化日期对象：item.time模板语法改为moment(item.time).format('YYYY-MM-DD')，并在res.render('list')中加入模板语法moment:moment
-7. 删除操作绑定Mongodb: list.ejs内删除某条账单的h5<a href="/account/<%= item._id %>"> 在id前加_（Mongoose会自动往对象内添加id属性)。同时在index.js中router.get('/account/:id')(// 删除记录)内改写删除操作为AccountModel.deleteOne()
+7. 删除操作绑定Mongodb: list.ejs内删除某条账单的h5 ||a href="/account/<%= item._id %>"||在id前加_（Mongoose会自动往对象内添加id属性)。同时在index.js中router.get('/account/:id')(// 删除记录)内改写删除操作为AccountModel.deleteOne()
 8. 优化删除操作：为了防止用户误删，在list.ejs中删除标签写防止误删操作的js代码。顺便在记账本title边上写一个“添加账单”的跳转按钮
 
 ##### 结合API接口
